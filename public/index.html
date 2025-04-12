@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonTalk 1x1</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <div class="chat-container searching">
+        <div class="chat-header">
+            <div class="chat-title">NeonTalk 1x1</div>
+            <div class="chat-status">
+                <div class="status-indicator"></div>
+                <span>Поиск собеседника</span>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="messages">
+            <div class="message system">
+                <div class="system-text">Подключение к анонимному чату...</div>
+                <div class="message-time">--:--</div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <button class="leave-chat" id="leaveChat" title="Покинуть чат" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 8L7 12L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 12H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <input type="text" class="message-input" placeholder="Напишите сообщение..." id="messageInput" disabled>
+            <button class="send-button" id="sendButton" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
